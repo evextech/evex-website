@@ -1,0 +1,18 @@
+EVEX FINAL GITHUB UPLOAD
+
+1. Extract EVEX_FINAL_GITHUB_WEBSITE_FIXED.zip.
+2. Open the extracted folder.
+3. Select ALL contents inside the folder:
+   index.html
+   styles.css
+   script.js
+   assets folder
+   all supporting HTML pages
+   .nojekyll
+   robots.txt
+   README.md
+   and the other included files.
+4. Drag those contents into GitHub's Upload files box.
+5. Do NOT upload the ZIP itself.
+6. Do NOT put the files inside another folder in the repository.
+   index.html must be at the repository root.
