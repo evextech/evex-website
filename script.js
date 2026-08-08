@@ -31,8 +31,16 @@ document.querySelectorAll('.spark path,.line-chart path,.fleet-lines line').forE
 
 document.querySelectorAll('form[data-prototype]').forEach(form=>form.addEventListener('submit',e=>{
   e.preventDefault();
-  const note=form.querySelector('.note');
-  if(note)note.textContent='Form preview complete. Connect the production form to your EVEX business email before launch.';
+  const lines=[];
+  form.querySelectorAll('label').forEach(label=>{
+    const field=label.querySelector('input,select,textarea');
+    if(!field)return;
+    const fieldLabel=(label.childNodes[0]&&label.childNodes[0].textContent||'').trim();
+    lines.push(`${fieldLabel}: ${field.value||'—'}`);
+  });
+  const subject=encodeURIComponent('EVEX Contact Form Inquiry');
+  const body=encodeURIComponent(lines.join('\n'));
+  window.location.href=`mailto:contact@evextech.ai?subject=${subject}&body=${body}`;
 }));
 
 

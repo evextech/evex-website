@@ -963,3 +963,18 @@ p{margin:0}
   .fleet-hub{width:48px;height:48px}
   .fleet-hub svg{width:22px;height:22px}
 }
+
+/* ==========================================================
+   V4 — Credibility / positioning pass
+   ========================================================== */
+
+/* Visible "this is illustrative" labeling on conceptual dashboards */
+.concept-tag{
+  font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#7c93a1;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  padding-bottom:10px;margin-bottom:2px
+}
+
+/* Compact message-only section for the EVEX method strip */
+.approach-section{padding:56px 0}
+.approach-section .section-heading{margin-bottom:0}
