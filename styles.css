@@ -381,6 +381,7 @@ p{margin:0}
 .light .bullets li{color:#546b7a}
 .bullets li:before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--cyan);margin-right:10px}
 .signal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.signal-grid-3{grid-template-columns:repeat(3,1fr)}
 .signal{border:1px solid #1b4056;background:#082030;border-radius:14px;padding:22px;min-height:130px}
 .signal strong{display:block;font-size:16px;margin-bottom:8px}
 .signal span{font-size:14px;color:#8ea4b2}
@@ -420,7 +421,7 @@ p{margin:0}
   .hero-copy{max-width:820px}.hero-benefits{max-width:860px}
   .asset-grid,.resource-grid{grid-template-columns:repeat(2,1fr)}
   .platform,.split,.contact-grid{grid-template-columns:1fr}
-  .signal-grid,.industry-grid{grid-template-columns:repeat(2,1fr)}
+  .signal-grid,.industry-grid,.signal-grid-3{grid-template-columns:repeat(2,1fr)}
   .footer-grid{grid-template-columns:1.5fr 1fr 1fr}
 }
 @media(max-width:760px){
@@ -433,11 +434,13 @@ p{margin:0}
   .hero{padding:112px 0 52px;min-height:auto}.hero h1{font-size:56px}
   .hero-copy .lead{font-size:16px}.hero-actions{flex-direction:column;align-items:stretch}
   .hero-benefits{grid-template-columns:1fr;gap:16px}
-  .hero-visual{height:520px}.transformer-stage{bottom:120px}
+  .hero-visual{height:auto}.transformer-stage{bottom:120px}
   .hero-dashboard{width:100%;right:0;top:auto;bottom:0}
+  .fleet-stage{display:none}
+  .fleet-dashboard{width:100%;position:static;margin-top:4px}
   .trust-list{gap:18px 28px}.trust-list{font-size:13px}
   .section{padding:70px 0}.section-heading p{font-size:16px}
-  .asset-grid,.resource-grid,.signal-grid,.industry-grid{grid-template-columns:1fr}
+  .asset-grid,.resource-grid,.signal-grid,.industry-grid,.signal-grid-3{grid-template-columns:1fr}
   .asset-card{min-height:440px}.asset-img{height:210px}
   .process{grid-template-columns:1fr}.process:before{display:none}
   .step{text-align:left;padding-left:82px;min-height:105px}.step-no{margin-left:0}
@@ -453,7 +456,7 @@ p{margin:0}
 }
 @media(max-width:520px){
   .container{width:min(calc(100% - 28px),var(--max))}
-  .hero h1{font-size:48px}.hero-visual{height:500px}
+  .hero h1{font-size:48px}.hero-visual{height:auto}
   h2{font-size:40px}.section-heading{margin-bottom:36px}
   .asset-copy p{font-size:14px}
   .resource-copy h3{font-size:19px}
@@ -872,19 +875,6 @@ p{margin:0}
    V2.2 Launch-Level Premium Polish
    ========================================================== */
 
-/* The approved V2.2 hero visual is now stored locally as one composition. */
-.hero-visual{
-  background:
-    url("assets/hero-v22-composite.jpg")
-    center center / contain no-repeat;
-}
-
-/* Prevent duplicate transformer/dashboard layers on top of the local hero master. */
-.hero-visual > .transformer-stage,
-.hero-visual > .hero-dashboard{
-  display:none !important;
-}
-
 /* The four approved V2.2 asset images are local runtime files. */
 .asset-img{
   image-rendering:auto;
@@ -893,18 +883,83 @@ p{margin:0}
   background-position:center center;
 }
 
+/* ==========================================================
+   V3 — Cross-Asset Fleet Intelligence Hero Visual
+   Replaces the single-transformer dashboard with a conceptual
+   fleet-risk view spanning solar, storage, transformer and
+   switchgear assets — one intelligence layer, many asset classes.
+   ========================================================== */
+.fleet-stage{
+  position:absolute;inset:0;border-radius:22px;overflow:hidden;
+  background:
+    radial-gradient(circle at 30% 30%,rgba(41,164,255,.20),transparent 42%),
+    radial-gradient(circle at 76% 72%,rgba(41,215,240,.12),transparent 40%),
+    linear-gradient(160deg,rgba(6,27,44,.95) 0%,rgba(3,17,28,.97) 60%,rgba(2,12,21,.98) 100%),
+    url("assets/hero-v22-composite.jpg") center 38% / cover no-repeat;
+  box-shadow:inset 0 0 100px rgba(3,17,28,.45)
+}
+.fleet-stage:before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.16;
+  background-image:
+    linear-gradient(rgba(81,159,190,.12) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(81,159,190,.12) 1px,transparent 1px);
+  background-size:64px 64px;
+}
+.fleet-lines{position:absolute;inset:0;width:100%;height:100%;z-index:1}
+.fleet-lines line{stroke:rgba(60,199,232,.42);stroke-width:.3;vector-effect:non-scaling-stroke}
+.fleet-node{
+  position:absolute;transform:translate(-50%,-50%);z-index:2;
+  display:flex;flex-direction:column;align-items:center;gap:7px
+}
+.fleet-node small{font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:#9db2bf;font-weight:700}
+.node-badge{
+  width:42px;height:42px;border-radius:50%;
+  border:1px solid rgba(72,153,190,.5);background:rgba(8,30,45,.86);
+  display:grid;place-items:center;color:#bfe0ee;backdrop-filter:blur(6px);
+  box-shadow:0 10px 26px rgba(0,0,0,.32)
+}
+.node-badge svg{width:20px;height:20px}
+.fleet-hub{
+  width:58px;height:58px;border-radius:50%;
+  background:linear-gradient(145deg,#22e8f2,#3d76ff);
+  display:grid;place-items:center;color:#07243a;
+  box-shadow:0 0 42px rgba(41,196,255,.42)
+}
+.fleet-hub svg{width:27px;height:27px}
+.fleet-node-hub small{color:#cfe8f2;letter-spacing:.14em}
+
+.fleet-dashboard{width:352px;z-index:3}
+.fleet-list{margin-top:14px}
+.fleet-row{
+  display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;
+  border-top:1px solid rgba(255,255,255,.06);padding:10px 0
+}
+.fleet-list .fleet-row:first-child{border-top:0;padding-top:2px}
+.fleet-icon-wrap{
+  width:28px;height:28px;border-radius:8px;
+  background:rgba(41,164,255,.12);border:1px solid rgba(63,143,181,.35);
+  display:grid;place-items:center;color:#8fd3ea
+}
+.fleet-icon-wrap svg{width:15px;height:15px}
+.fleet-meta{display:flex;flex-direction:column;gap:2px;min-width:0}
+.fleet-meta strong{font-size:12px;color:#e8f1f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fleet-meta span{font-size:10px;color:#8298a6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fleet-row b{font-size:10.5px;white-space:nowrap;text-align:right;font-weight:700}
+.status-attn{color:var(--red)}
+.status-review{color:var(--amber)}
+.status-normal{color:var(--green)}
+.status-watch{color:var(--cyan-soft)}
+.fleet-summary span{color:#c3d3dc;font-weight:700;letter-spacing:.02em;font-size:10.5px}
+
 /* Local hero remains responsive on tablet/mobile. */
 @media(max-width:1080px){
-  .hero-visual{
-    min-height:590px;
-    background-position:center top;
-  }
+  .fleet-stage{background-position:center top,center top,center top,center 30%}
 }
 @media(max-width:760px){
-  .hero-visual{
-    height:auto;
-    min-height:500px;
-    background-size:contain;
-    background-position:center center;
-  }
+  .fleet-node small{display:none}
+  .fleet-node{gap:0}
+  .node-badge{width:34px;height:34px}
+  .node-badge svg{width:16px;height:16px}
+  .fleet-hub{width:48px;height:48px}
+  .fleet-hub svg{width:22px;height:22px}
 }

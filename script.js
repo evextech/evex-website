@@ -17,8 +17,9 @@ const io=new IntersectionObserver(entries=>{
 },{threshold:.08});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-document.querySelectorAll('.spark path,.line-chart path').forEach(path=>{
-  const len=path.getTotalLength?.();
+document.querySelectorAll('.spark path,.line-chart path,.fleet-lines line').forEach(path=>{
+  let len;
+  try{len=path.getTotalLength?.();}catch(err){return;}
   if(!len)return;
   path.style.strokeDasharray=len;
   path.style.strokeDashoffset=len;
