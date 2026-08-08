@@ -1,0 +1,28 @@
+{
+  "version": "EVEX V2.2 FINAL \u2014 Local Assets",
+  "local_assets_exist": {
+    "assets/hero-v22-composite.jpg": true,
+    "assets/transformer-v22.jpg": true,
+    "assets/switchgear-v22.jpg": true,
+    "assets/bess-v22.jpg": true,
+    "assets/solar-v22.jpg": true
+  },
+  "homepage_asset_card_paths": [
+    "background-image:url('assets/transformer-v22.jpg')",
+    "background-image:url('assets/switchgear-v22.jpg')",
+    "background-image:url('assets/bess-v22.jpg')",
+    "background-image:url('assets/solar-v22.jpg')"
+  ],
+  "solutions_asset_card_paths": [
+    "background-image:url('assets/transformer-v22.jpg')",
+    "background-image:url('assets/switchgear-v22.jpg')",
+    "background-image:url('assets/bess-v22.jpg')",
+    "background-image:url('assets/solar-v22.jpg')"
+  ],
+  "hero_local_reference": true,
+  "runtime_external_image_references": [],
+  "resources_removed": true,
+  "resources_nav_removed": true,
+  "before_failure_period_removed": true,
+  "passed": true
+}

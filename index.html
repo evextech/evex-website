@@ -1,147 +1,130 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>EVEX | Energy Asset Intelligence</title><meta name="description" content="EVEX combines advanced sensing, operational data, and AI-assisted analytics for critical energy asset intelligence.">
-<meta name="theme-color" content="#04131f">
-<link rel="icon" href="assets/favicon.ico"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>EVEX | Energy Asset Intelligence</title><meta content="EVEX combines advanced sensing, operational data, and AI-assisted analytics for critical energy asset intelligence." name="description"/>
+<meta content="#04131f" name="theme-color"/>
+<link href="assets/favicon.ico" rel="icon"/><link href="assets/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/>
 </head>
 <body>
-<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
-<symbol id="i-wave" viewBox="0 0 64 64"><path d="M3 34h8l5-19 8 36 8-41 8 46 7-33 5 11h9" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-<symbol id="i-layers" viewBox="0 0 64 64"><path d="m32 7 24 13-24 13L8 20 32 7Zm-20 24 20 11 20-11M12 42l20 11 20-11" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-<symbol id="i-chart" viewBox="0 0 64 64"><path d="M8 8v48h48M15 45l12-14 9 8 15-22" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="m44 17h7v7" fill="none" stroke="currentColor" stroke-width="2.6"/></symbol>
-<symbol id="i-bell" viewBox="0 0 64 64"><path d="M18 45h28l-4-7V27a10 10 0 0 0-20 0v11l-4 7Zm10 6h8" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-<symbol id="i-check" viewBox="0 0 64 64"><circle cx="32" cy="32" r="23" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="m20 32 8 8 17-19" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-<symbol id="i-diamond" viewBox="0 0 64 64"><path d="m32 7 20 12v26L32 57 12 45V19L32 7Z" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="32" cy="32" r="5" fill="currentColor"/></symbol>
-<symbol id="i-transformer" viewBox="0 0 64 64"><path d="M15 22h34v31H15zM21 22V11h7v11M36 22V11h7v11M22 36h20M22 43h20" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/></symbol>
-<symbol id="i-switch" viewBox="0 0 64 64"><path d="M14 13h36v40H14zM32 13v40M20 22h6M20 30h6M38 22h6M38 30h6" fill="none" stroke="currentColor" stroke-width="2.3"/></symbol>
-<symbol id="i-battery" viewBox="0 0 64 64"><rect x="13" y="18" width="38" height="32" rx="3" fill="none" stroke="currentColor" stroke-width="2.3"/><path d="M27 13h10v5M22 34h20M32 26v16" fill="none" stroke="currentColor" stroke-width="2.3"/></symbol>
-<symbol id="i-solar" viewBox="0 0 64 64"><path d="m13 17 37 3-5 24-37-3 5-24Zm13 29v8m-9 0h18M15 29l32 3M28 18l-5 24M40 19l-5 24" fill="none" stroke="currentColor" stroke-width="2.1"/></symbol>
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+<symbol id="i-wave" viewbox="0 0 64 64"><path d="M3 34h8l5-19 8 36 8-41 8 46 7-33 5 11h9" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6"></path></symbol>
+<symbol id="i-layers" viewbox="0 0 64 64"><path d="m32 7 24 13-24 13L8 20 32 7Zm-20 24 20 11 20-11M12 42l20 11 20-11" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6"></path></symbol>
+<symbol id="i-chart" viewbox="0 0 64 64"><path d="M8 8v48h48M15 45l12-14 9 8 15-22" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6"></path><path d="m44 17h7v7" fill="none" stroke="currentColor" stroke-width="2.6"></path></symbol>
+<symbol id="i-bell" viewbox="0 0 64 64"><path d="M18 45h28l-4-7V27a10 10 0 0 0-20 0v11l-4 7Zm10 6h8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6"></path></symbol>
+<symbol id="i-check" viewbox="0 0 64 64"><circle cx="32" cy="32" fill="none" r="23" stroke="currentColor" stroke-width="2.6"></circle><path d="m20 32 8 8 17-19" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6"></path></symbol>
+<symbol id="i-diamond" viewbox="0 0 64 64"><path d="m32 7 20 12v26L32 57 12 45V19L32 7Z" fill="none" stroke="currentColor" stroke-width="2.4"></path><circle cx="32" cy="32" fill="currentColor" r="5"></circle></symbol>
+<symbol id="i-transformer" viewbox="0 0 64 64"><path d="M15 22h34v31H15zM21 22V11h7v11M36 22V11h7v11M22 36h20M22 43h20" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2.3"></path></symbol>
+<symbol id="i-switch" viewbox="0 0 64 64"><path d="M14 13h36v40H14zM32 13v40M20 22h6M20 30h6M38 22h6M38 30h6" fill="none" stroke="currentColor" stroke-width="2.3"></path></symbol>
+<symbol id="i-battery" viewbox="0 0 64 64"><rect fill="none" height="32" rx="3" stroke="currentColor" stroke-width="2.3" width="38" x="13" y="18"></rect><path d="M27 13h10v5M22 34h20M32 26v16" fill="none" stroke="currentColor" stroke-width="2.3"></path></symbol>
+<symbol id="i-solar" viewbox="0 0 64 64"><path d="m13 17 37 3-5 24-37-3 5-24Zm13 29v8m-9 0h18M15 29l32 3M28 18l-5 24M40 19l-5 24" fill="none" stroke="currentColor" stroke-width="2.1"></path></symbol>
 </svg>
-
 <header class="site-header">
- <nav class="nav container">
-   <a class="logo" href="index.html"><img src="assets/evex-logo.webp" alt="EVEX — Energy Asset Intelligence"></a>
-   <button class="menu-btn" aria-label="Menu"><span></span><span></span></button>
-   <div class="nav-links"><a class="chev" href="solutions.html">SOLUTIONS</a><a class="chev" href="solutions.html#asset-types">ASSET TYPES</a><a class="" href="technology.html">TECHNOLOGY</a><a class="chev" href="index.html#resources">RESOURCES</a><a class="" href="about.html">ABOUT</a><a class="contact" href="contact.html">CONTACT US</a></div>
- </nav>
+<nav class="nav container">
+<a class="logo" href="index.html"><img alt="EVEX — Energy Asset Intelligence" src="assets/evex-logo.webp"/></a>
+<button aria-label="Menu" class="menu-btn"><span></span><span></span></button>
+<div class="nav-links"><a class="chev" href="solutions.html">SOLUTIONS</a><a class="chev" href="solutions.html#asset-types">ASSET TYPES</a><a class="" href="technology.html">TECHNOLOGY</a><a class="" href="about.html">ABOUT</a><a class="contact" href="contact.html">CONTACT US</a></div>
+</nav>
 </header>
-
 <main>
 <section class="hero">
- <div class="container hero-grid">
-  <div class="hero-copy reveal">
-   <p class="eyebrow">ENERGY ASSET INTELLIGENCE</p>
-   <h1>See Risk<br><span class="gradient">Before Failure.</span></h1>
-   <p class="lead">EVEX combines advanced sensing, operational data, and AI-assisted analytics to detect developing issues earlier and enable more confident maintenance decisions.</p>
-   <div class="hero-actions"><a class="btn btn-primary" href="solutions.html">EXPLORE SOLUTIONS&nbsp;&nbsp; →</a><a class="btn btn-outline" href="contact.html">TALK TO AN EXPERT</a></div>
-   <div class="hero-benefits">
-    <div class="benefit"><svg class="benefit-icon"><use href="#i-diamond"/></svg><div><strong>Early Detection</strong><span>Identify developing issues before they escalate</span></div></div>
-    <div class="benefit"><svg class="benefit-icon"><use href="#i-diamond"/></svg><div><strong>Asset Intelligence</strong><span>AI + engineering insights you can trust</span></div></div>
-    <div class="benefit"><svg class="benefit-icon"><use href="#i-diamond"/></svg><div><strong>Operational Impact</strong><span>Reduce risk and focus maintenance resources</span></div></div>
-   </div>
-  </div>
-  <div class="hero-visual reveal">
-   <div class="transformer-stage"></div>
-   <aside class="hero-dashboard">
-    <div class="dash-head"><div><strong>◉ &nbsp;ASSET-1104</strong><span class="sub">Transformer</span></div><span class="type">Transformer</span></div>
-    <div class="asset-score"><b>84</b><span>/100</span></div><div class="asset-label">Asset Health</div>
-    <div class="spark"><svg viewBox="0 0 250 55" preserveAspectRatio="none"><line x1="0" y1="45" x2="250" y2="45"/><line x1="0" y1="25" x2="250" y2="25"/><path d="M0 45 L20 39 L40 42 L61 31 L83 34 L104 26 L126 28 L148 20 L171 23 L194 15 L217 18 L239 8 L250 6"/></svg></div>
-    <div class="metric"><span>▣ ACOUSTIC</span><b class="warn">Trending ●</b></div>
-    <div class="metric"><span>▣ THERMAL</span><b class="ok">Normal ●</b></div>
-    <div class="metric"><span>▣ DISSOLVED GAS</span><b class="ok">Normal ●</b></div>
-    <div class="metric"><span>▣ PD INDICATOR</span><b class="warn">Attention ●</b></div>
-    <div class="risk"><span>OVERALL RISK</span><b class="warn">Moderate ◆</b></div>
-   </aside>
-  </div>
- </div>
+<div class="container hero-grid">
+<div class="hero-copy reveal">
+<p class="eyebrow">ENERGY ASSET INTELLIGENCE</p>
+<h1>See Risk<br/><span class="gradient">Before Failure</span></h1>
+<p class="lead">EVEX combines advanced sensing, operational data, and AI-assisted analytics to detect developing issues earlier and enable more confident maintenance decisions.</p>
+<div class="hero-actions"><a class="btn btn-primary" href="solutions.html">EXPLORE SOLUTIONS   →</a><a class="btn btn-outline" href="contact.html">TALK TO AN EXPERT</a></div>
+<div class="hero-benefits">
+<div class="benefit"><svg class="benefit-icon"><use href="#i-diamond"></use></svg><div><strong>Early Detection</strong><span>Identify developing issues before they escalate</span></div></div>
+<div class="benefit"><svg class="benefit-icon"><use href="#i-diamond"></use></svg><div><strong>Asset Intelligence</strong><span>AI + engineering insights you can trust</span></div></div>
+<div class="benefit"><svg class="benefit-icon"><use href="#i-diamond"></use></svg><div><strong>Operational Impact</strong><span>Reduce risk and focus maintenance resources</span></div></div>
+</div>
+</div>
+<div class="hero-visual reveal">
+<div class="transformer-stage"></div>
+<aside class="hero-dashboard">
+<div class="dash-head"><div><strong>◉  ASSET-1104</strong><span class="sub">Transformer</span></div><span class="type">Transformer</span></div>
+<div class="asset-score"><b>84</b><span>/100</span></div><div class="asset-label">Asset Health</div>
+<div class="spark"><svg preserveaspectratio="none" viewbox="0 0 250 55"><line x1="0" x2="250" y1="45" y2="45"></line><line x1="0" x2="250" y1="25" y2="25"></line><path d="M0 45 L20 39 L40 42 L61 31 L83 34 L104 26 L126 28 L148 20 L171 23 L194 15 L217 18 L239 8 L250 6"></path></svg></div>
+<div class="metric"><span>▣ ACOUSTIC</span><b class="warn">Trending ●</b></div>
+<div class="metric"><span>▣ THERMAL</span><b class="ok">Normal ●</b></div>
+<div class="metric"><span>▣ DISSOLVED GAS</span><b class="ok">Normal ●</b></div>
+<div class="metric"><span>▣ PD INDICATOR</span><b class="warn">Attention ●</b></div>
+<div class="risk"><span>OVERALL RISK</span><b class="warn">Moderate ◆</b></div>
+</aside>
+</div>
+</div>
 </section>
-
 <section class="trust">
- <div class="container">
-  <div class="trust-title">BUILT FOR ENGINEERS AND OPERATORS</div>
-  <div class="trust-list"><span><i>◉</i>Utilities</span><span><i>✦</i>Renewables</span><span><i>⚙</i>Industrial</span><span><i>▦</i>Data Centers</span><span><i>◆</i>Transportation</span><span><i>◍</i>Energy Storage</span></div>
- </div>
+<div class="container">
+<div class="trust-title">BUILT FOR ENGINEERS AND OPERATORS</div>
+<div class="trust-list"><span><i>◉</i>Utilities</span><span><i>✦</i>Renewables</span><span><i>⚙</i>Industrial</span><span><i>▦</i>Data Centers</span><span><i>◆</i>Transportation</span><span><i>◍</i>Energy Storage</span></div>
+</div>
 </section>
-
 <section class="section" id="asset-types">
- <div class="container">
-  <div class="section-heading reveal"><p class="eyebrow">OUR SOLUTIONS</p><h2>Intelligence for Critical Energy Assets</h2><p>EVEX solutions combine advanced monitoring, diagnostics, and actionable engineering insights for the assets that keep operations powered.</p></div>
-  <div class="asset-grid">
-   <article class="asset-card reveal"><div class="asset-img" style="background-image:url('assets/transformer.jpg')"></div><div class="hex"><svg><use href="#i-transformer"/></svg></div><div class="asset-copy"><h3>Transformers</h3><p>Monitor electrical, thermal, acoustic, and dissolved-gas indicators to identify developing abnormalities.</p><a class="text-link" href="transformers.html">LEARN MORE&nbsp; →</a></div></article>
-   <article class="asset-card reveal"><div class="asset-img" style="background-image:url('assets/switchgear.jpg')"></div><div class="hex"><svg><use href="#i-switch"/></svg></div><div class="asset-copy"><h3>Switchgear & MV</h3><p>Continuous condition monitoring for PD, thermal, mechanical, and environmental conditions across MV assets.</p><a class="text-link" href="switchgear.html">LEARN MORE&nbsp; →</a></div></article>
-   <article class="asset-card reveal"><div class="asset-img" style="background-image:url('assets/bess.jpg')"></div><div class="hex"><svg><use href="#i-battery"/></svg></div><div class="asset-copy"><h3>BESS & Batteries</h3><p>Combine BMS data, thermal information, and advanced diagnostics to identify abnormal behavior and degradation.</p><a class="text-link" href="bess.html">LEARN MORE&nbsp; →</a></div></article>
-   <article class="asset-card reveal"><div class="asset-img" style="background-image:url('assets/solar.jpg')"></div><div class="hex"><svg><use href="#i-solar"/></svg></div><div class="asset-copy"><h3>Solar & Power Electronics</h3><p>Performance and condition intelligence for inverters, PV plants, and power-electronic systems.</p><a class="text-link" href="solar.html">LEARN MORE&nbsp; →</a></div></article>
-  </div>
-  <div class="asset-more"><a class="small-pill" href="solutions.html">VIEW ALL ASSET TYPES</a></div>
-
-  <div class="process-shell">
-   <div class="section-heading reveal"><p class="eyebrow">HOW IT WORKS</p><h2>From Signals to Decisions.</h2><p>A proven engineering workflow that turns complex data into clear action.</p></div>
-   <div class="process">
-    <div class="step reveal"><span class="step-no">01</span><div class="step-icon"><svg><use href="#i-wave"/></svg></div><h3>Collect</h3><p>Multi-source data from sensors and operational systems.</p></div>
-    <div class="step reveal"><span class="step-no">02</span><div class="step-icon"><svg><use href="#i-layers"/></svg></div><h3>Analyze</h3><p>AI-assisted analytics and engineering rules identify abnormalities.</p></div>
-    <div class="step reveal"><span class="step-no">03</span><div class="step-icon"><svg><use href="#i-chart"/></svg></div><h3>Assess</h3><p>Health scores and risk indicators quantify asset condition.</p></div>
-    <div class="step reveal"><span class="step-no">04</span><div class="step-icon"><svg><use href="#i-bell"/></svg></div><h3>Alert</h3><p>Smart notifications prioritize what matters most.</p></div>
-    <div class="step reveal"><span class="step-no">05</span><div class="step-icon"><svg><use href="#i-check"/></svg></div><h3>Act</h3><p>Confident decisions improve reliability and reduce cost.</p></div>
-   </div>
-  </div>
-
-  <div class="platform">
-   <div class="platform-copy reveal">
-    <p class="eyebrow">THE EVEX INTELLIGENCE LAYER</p>
-    <h2>Unified. Scalable.<br>Built for Reliability.</h2>
-    <p>This conceptual architecture shows how EVEX can unify operational data, diagnostics, and analytics into a clear asset-health view.</p>
-    <ul><li>Open and technology-agnostic</li><li>Secure cloud-ready architecture</li><li>Scalable from single asset to fleet</li><li>APIs for integration</li></ul>
-    <a class="small-pill" href="technology.html">EXPLORE THE APPROACH</a>
-   </div>
-   <div class="dashboard reveal" aria-label="Conceptual EVEX dashboard">
-    <div class="dashboard-top"><div class="dash-logo">EVE<em>X</em></div><div class="avatar"></div></div>
-    <div class="dashboard-body">
-     <div class="side-nav"><div class="side-item active">◉ &nbsp;Overview</div><div class="side-item">◇ &nbsp;Assets</div><div class="side-item">△ &nbsp;Alerts</div><div class="side-item">⌁ &nbsp;Analytics</div><div class="side-item">▤ &nbsp;Reports</div><div class="side-item">◎ &nbsp;Integrations</div><div class="side-item">⚙ &nbsp;Settings</div></div>
-     <div><h3 class="panel-title">Overview</h3>
-      <div class="kpis"><div class="kpi good"><small>ASSET HEALTH</small><strong>78</strong><span>Good</span></div><div class="kpi risky"><small>AT RISK ASSETS</small><strong>12</strong><span>High Priority</span></div><div class="kpi"><small>TOTAL ASSETS</small><strong>248</strong><span class="ok">Online</span></div><div class="kpi risky"><small>ALERTS (7D)</small><strong>23</strong><span>Active</span></div></div>
-      <div class="chart-grid"><div class="chart-card"><h4>Health Trend</h4><div class="line-chart"><svg viewBox="0 0 300 100" preserveAspectRatio="none"><line x1="0" y1="22" x2="300" y2="22"/><line x1="0" y1="50" x2="300" y2="50"/><line x1="0" y1="78" x2="300" y2="78"/><path d="M0 76 L30 65 L57 68 L88 56 L118 59 L150 43 L177 48 L207 35 L235 38 L269 29 L300 18"/></svg></div></div><div class="chart-card"><h4>Risk Distribution</h4><div class="donut-wrap"><div class="donut"></div><div class="legend"><div><i style="background:#2ed292"></i>Low&nbsp;&nbsp;60%</div><div><i style="background:#f2bd4d"></i>Moderate&nbsp;&nbsp;30%</div><div><i style="background:#ff5b59"></i>High&nbsp;&nbsp;10%</div></div></div></div></div>
-     </div>
-    </div>
-   </div>
-  </div>
- </div>
+<div class="container">
+<div class="section-heading reveal"><p class="eyebrow">OUR SOLUTIONS</p><h2>Intelligence for Critical<br/>Energy Assets</h2><p>Purpose-built monitoring and asset intelligence for high-value electrical infrastructure — combining engineering context, advanced sensing, and analytics.</p></div>
+<div class="asset-grid">
+<article class="asset-card reveal"><div class="asset-img" style="background-image:url('assets/transformer-v22.jpg')"></div><div class="hex"><svg><use href="#i-transformer"></use></svg></div><div class="asset-copy"><h3>Transformers</h3><p>Monitor electrical, thermal, acoustic, and dissolved-gas indicators to identify developing abnormalities.</p><a class="text-link" href="transformers.html">LEARN MORE  →</a></div></article>
+<article class="asset-card reveal"><div class="asset-img" style="background-image:url('assets/switchgear-v22.jpg')"></div><div class="hex"><svg><use href="#i-switch"></use></svg></div><div class="asset-copy"><h3>Switchgear &amp; MV</h3><p>Continuous condition monitoring for PD, thermal, mechanical, and environmental conditions across MV assets.</p><a class="text-link" href="switchgear.html">LEARN MORE  →</a></div></article>
+<article class="asset-card reveal"><div class="asset-img" style="background-image:url('assets/bess-v22.jpg')"></div><div class="hex"><svg><use href="#i-battery"></use></svg></div><div class="asset-copy"><h3>BESS &amp; Batteries</h3><p>Combine BMS data, thermal information, and advanced diagnostics to identify abnormal behavior and degradation.</p><a class="text-link" href="bess.html">LEARN MORE  →</a></div></article>
+<article class="asset-card reveal"><div class="asset-img" style="background-image:url('assets/solar-v22.jpg')"></div><div class="hex"><svg><use href="#i-solar"></use></svg></div><div class="asset-copy"><h3>Solar &amp; Power Electronics</h3><p>Performance and condition intelligence for inverters, PV plants, and power-electronic systems.</p><a class="text-link" href="solar.html">LEARN MORE  →</a></div></article>
+</div>
+<div class="process-shell">
+<div class="section-heading reveal"><p class="eyebrow">HOW IT WORKS</p><h2>From Signals to Decisions</h2><p>A disciplined engineering workflow that turns fragmented signals into clearer asset-health decisions.</p></div>
+<div class="process">
+<div class="step reveal"><span class="step-no">01</span><div class="step-icon"><svg><use href="#i-wave"></use></svg></div><h3>Collect</h3><p>Multi-source data from sensors and operational systems.</p></div>
+<div class="step reveal"><span class="step-no">02</span><div class="step-icon"><svg><use href="#i-layers"></use></svg></div><h3>Analyze</h3><p>AI-assisted analytics and engineering rules identify abnormalities.</p></div>
+<div class="step reveal"><span class="step-no">03</span><div class="step-icon"><svg><use href="#i-chart"></use></svg></div><h3>Assess</h3><p>Health scores and risk indicators quantify asset condition.</p></div>
+<div class="step reveal"><span class="step-no">04</span><div class="step-icon"><svg><use href="#i-bell"></use></svg></div><h3>Alert</h3><p>Smart notifications prioritize what matters most.</p></div>
+<div class="step reveal"><span class="step-no">05</span><div class="step-icon"><svg><use href="#i-check"></use></svg></div><h3>Act</h3><p>Confident decisions improve reliability and reduce cost.</p></div>
+</div>
+</div>
+<div class="platform">
+<div class="platform-copy reveal">
+<p class="eyebrow">THE EVEX INTELLIGENCE LAYER</p>
+<h2>Unified. Scalable.<br/>Built for Reliability.</h2>
+<p>EVEX is building an intelligence layer that unifies operational data, diagnostics, and analytics into a clearer asset-health and risk view.</p>
+<ul><li>Open and technology-agnostic</li><li>Secure cloud-ready architecture</li><li>Scalable from single asset to fleet</li><li>APIs for integration</li></ul>
+<a class="small-pill" href="technology.html">EXPLORE THE APPROACH</a>
+</div>
+<div aria-label="Conceptual EVEX dashboard" class="dashboard reveal">
+<div class="dashboard-top"><div class="dash-logo">EVE<em>X</em></div><div class="avatar"></div></div>
+<div class="dashboard-body">
+<div class="side-nav"><div class="side-item active">◉  Overview</div><div class="side-item">◇  Assets</div><div class="side-item">△  Alerts</div><div class="side-item">⌁  Analytics</div><div class="side-item">▤  Reports</div><div class="side-item">◎  Integrations</div><div class="side-item">⚙  Settings</div></div>
+<div>
+<div class="panel-head">
+<div><span class="panel-kicker">FLEET INTELLIGENCE</span><h3 class="panel-title">Overview</h3></div>
+<div class="panel-controls"><span>Filter</span><span>Last 30 Days⌄</span></div>
+</div>
+<div class="kpis"><div class="kpi good"><small>ASSET HEALTH</small><strong>78</strong><span>Good</span><em>↗ +3.2%</em></div><div class="kpi risky"><small>AT RISK ASSETS</small><strong>12</strong><span>High Priority</span><em>4 require review</em></div><div class="kpi"><small>TOTAL ASSETS</small><strong>248</strong><span class="ok">Online</span><em>97% reporting</em></div><div class="kpi risky"><small>ALERTS (7D)</small><strong>23</strong><span>Active</span><em>↓ 8 resolved</em></div></div>
+<div class="chart-grid"><div class="chart-card"><h4>Health Trend</h4><div class="line-chart"><svg preserveaspectratio="none" viewbox="0 0 300 100"><line x1="0" x2="300" y1="22" y2="22"></line><line x1="0" x2="300" y1="50" y2="50"></line><line x1="0" x2="300" y1="78" y2="78"></line><path d="M0 76 L30 65 L57 68 L88 56 L118 59 L150 43 L177 48 L207 35 L235 38 L269 29 L300 18"></path></svg></div></div><div class="chart-card"><h4>Risk Distribution</h4><div class="donut-wrap"><div class="donut"></div><div class="legend"><div><i style="background:#2ed292"></i>Low  60%</div><div><i style="background:#f2bd4d"></i>Moderate  30%</div><div><i style="background:#ff5b59"></i>High  10%</div></div></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-
-<section class="section section-alt resources" id="resources">
- <div class="container">
-  <div class="section-heading reveal"><p class="eyebrow">RESOURCES</p><h2>Insights for Smarter Operations.</h2></div>
-  <div class="resource-grid">
-   <article class="resource"><div class="resource-img" style="background-image:url('assets/resource-transformer.jpg')"></div><div class="resource-copy"><small>TECHNICAL NOTE</small><h3>The Business Case for Earlier Asset Condition Visibility</h3><a href="#">Coming Soon&nbsp; →</a></div></article>
-   <article class="resource"><div class="resource-img" style="background-image:url('assets/resource-solar.jpg')"></div><div class="resource-copy"><small>APPLICATION BRIEF</small><h3>Advanced Solar Condition Intelligence Beyond Thermal Imaging</h3><a href="#">Coming Soon&nbsp; →</a></div></article>
-   <article class="resource"><div class="resource-img" style="background-image:url('assets/resource-substation.jpg')"></div><div class="resource-copy"><small>TECHNOLOGY</small><h3>5 Signals That Can Improve Visibility Into Critical Assets</h3><a href="#">Coming Soon&nbsp; →</a></div></article>
-   <article class="resource"><div class="resource-img" style="background-image:url('assets/resource-digital.jpg')"></div><div class="resource-copy"><small>GUIDE</small><h3>From Data to Decisions: Building Asset Intelligence</h3><a href="#">Coming Soon&nbsp; →</a></div></article>
-  </div>
- </div>
-</section>
-
 <section class="cta">
- <div class="container cta-inner">
-  <div><h3>See Risk Before Failure.</h3><p>Let's build a more reliable, better-informed future together.</p></div>
-  <a class="btn" href="contact.html">CONTACT US&nbsp;&nbsp; →</a>
- </div>
+<div class="container">
+<div class="cta-panel reveal">
+<div class="cta-copy">
+<p class="eyebrow">READY TO START?</p>
+<h3>See Risk Before Failure</h3>
+<p>Start with the assets, data, and reliability questions that matter most to your operation.</p>
+</div>
+<a class="btn btn-primary" href="contact.html">DISCUSS YOUR ASSETS   →</a>
+</div>
+</div>
 </section>
 </main>
-
-
 <footer class="footer">
- <div class="container footer-grid">
-  <div><img class="footer-logo" src="assets/evex-logo.webp" alt="EVEX"><p>Advanced monitoring, diagnostics, sensing integration, and data intelligence for critical energy assets.</p></div>
-  <div><h4>Solutions</h4><a href="solutions.html">Overview</a><a href="transformers.html">Transformers</a><a href="switchgear.html">Switchgear & MV</a><a href="bess.html">BESS & Batteries</a><a href="solar.html">Solar & Power Electronics</a></div>
-  <div><h4>Asset Types</h4><a href="transformers.html">Transformers</a><a href="switchgear.html">Switchgear & MV</a><a href="bess.html">BESS & Batteries</a><a href="solar.html">Solar & Power Electronics</a></div>
-  <div><h4>Company</h4><a href="about.html">About</a><a href="industries.html">Industries</a><a href="technology.html">Technology</a></div>
-  <div><h4>Contact</h4><a href="mailto:contact@evextech.ai">contact@evextech.ai</a><a href="contact.html">Discuss Your Assets</a></div>
- </div>
- <div class="container footer-bottom"><span>© 2026 EVEX TECH LLC. All rights reserved.</span><span><a href="privacy.html">Privacy Policy</a> &nbsp;&nbsp; <a href="terms.html">Terms of Use</a></span></div>
+<div class="container footer-grid"><div><img alt="EVEX" class="footer-logo" src="assets/evex-logo.webp"/><p>Energy Asset Intelligence for critical electrical infrastructure — combining monitoring, diagnostics, sensing integration, and engineering analytics.</p></div><div><h4>Asset Types</h4><a href="transformers.html">Transformers</a><a href="switchgear.html">Switchgear &amp; MV</a><a href="bess.html">BESS &amp; Batteries</a><a href="solar.html">Solar &amp; Power Electronics</a></div><div><h4>Technology</h4><a href="technology.html">Our Approach</a><a href="solutions.html">Solutions Overview</a><a href="industries.html">Industries</a></div><div><h4>Company</h4><a href="about.html">About EVEX</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></div><div><h4>Contact</h4><a href="mailto:contact@evextech.ai">contact@evextech.ai</a><a href="contact.html">Discuss Your Assets</a><a href="#">Florida, USA</a></div></div>
+<div class="container footer-bottom"><span>© 2026 EVEX TECH LLC. All rights reserved.</span><span><a href="privacy.html">Privacy Policy</a>    <a href="terms.html">Terms of Use</a></span></div>
 </footer>
 <script src="script.js"></script>
 </body></html>

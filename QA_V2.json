@@ -1,0 +1,13 @@
+{
+  "version": "EVEX V2 \u2014 Bay Area Premium Pass",
+  "required_files_ok": true,
+  "missing_links": [],
+  "missing_images": [],
+  "counts": {
+    "asset_cards": 4,
+    "process_steps": 5,
+    "resource_cards": 4,
+    "kpis": 4
+  },
+  "passed": true
+}

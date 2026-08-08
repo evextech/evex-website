@@ -1,0 +1,16 @@
+{
+  "version": "EVEX V2.2 \u2014 Launch-Level Premium Polish",
+  "resources_section_removed": true,
+  "resources_nav_removed": true,
+  "before_failure_period_removed": true,
+  "process_heading_period_removed": true,
+  "asset_cards": 4,
+  "transformer_hd": true,
+  "switchgear_hd": true,
+  "bess_hd": true,
+  "solar_hd": true,
+  "view_all_removed": true,
+  "premium_cta": true,
+  "footer_columns": 5,
+  "passed": true
+}
